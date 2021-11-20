@@ -34,24 +34,38 @@ predict(simp,new,se.fit=TRUE)
 ```
 ## Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).
 
+# WEIGHT
+
+
 ```{r}
 simp <- lm(LENGTH~WEIGHT,data=bears)
 plot(LENGTH~WEIGHT,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
+
+
+# CHEST
+
 ```{r}
 simp <- lm(LENGTH~CHEST,data=bears)
 plot(LENGTH~CHEST,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
+
+
+# AGE
+
 ```{r}
 simp <- lm(LENGTH~AGE,data=bears)
 plot(LENGTH~AGE,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
+
+# HEADLEN
+
 ```{r}
 simp <- lm(LENGTH~HEADLEN,data=bears)
 plot(LENGTH~HEADLEN,data=bears)
@@ -59,6 +73,15 @@ abline(simp)
 summary.lm(simp)
 ```
 
+
+# HEADWTH
+
+```{r}
+simp <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(simp)
+summary.lm(simp)
+```
 
 
 
