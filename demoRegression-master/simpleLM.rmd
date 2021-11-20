@@ -58,7 +58,7 @@ plot(LENGTH~CHEST,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
-
+When comparing Length to HEADWTH we get an adjusted R-squared of 0.786 which is one the better of all the categorizes that we have tested. 
 
 # AGE
 
@@ -68,7 +68,8 @@ plot(LENGTH~AGE,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
-
+  
+When comparing Length to AGE we get an adjusted R-squared of 0.507 which is one the lowest of all the categorizes that we have tested. 
 # HEADLEN
 
 ```{r}
@@ -77,7 +78,8 @@ plot(LENGTH~HEADLEN,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
-
+  
+When comparing Length to HEADLEN we get an adjusted R-squared of 0.843 which is the best of all the categorizes that we have tested. 
 
 # HEADWTH
 
@@ -89,7 +91,14 @@ summary.lm(simp)
 ```
 When comparing Length to HEADWTH we get an adjusted R-squared of 0.532 which is one the lowest of all the categorizes that we have tested. 
 
+# NECK SQUARED
 
-
-
-
+```{r}
+simp <- lm(LENGTH~I(NECK**2)+NECK,data=bears)
+plot(LENGTH~I(NECK**2)+NECK,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+# Best Variable
+  
+The best variable to compare LENGTH but using HEADLEN.  This gave us an adjusted R-squared of 0.843
