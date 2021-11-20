@@ -1,8 +1,13 @@
 ---
 title: "simpleRegress"
 author: "Nathan Abromovich"
-date: "Fall 2021"
-output: html_document
+output: 
+  html_document:
+    number_sections: true
+    toc: true
+    toc_depth: 5
+date: "`r Sys.Date()`"    
+    
 ---
 
 ```{r setup, include=FALSE}
@@ -82,7 +87,7 @@ plot(LENGTH~HEADWTH,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
-
+When comparing Length to HEADWTH we get an adjusted R-squared of 0.532 which is one the lowest of all the categorizes that we have tested. 
 
 
 
