@@ -1,7 +1,7 @@
 ---
 title: "simpleRegress"
 author: "Nathan Abromovich"
-date: "Fall 2020"
+date: "Fall 2021"
 output: html_document
 ---
 
